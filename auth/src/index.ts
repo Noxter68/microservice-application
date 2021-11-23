@@ -4,6 +4,8 @@ import { app } from "./app";
 
 // auth-mongo-srv because of the service running into k8s
 const start = async () => {
+  console.log('Starting up...');
+
   if (!process.env.JWT_KEY) {
     throw new Error("JWT_KEY must be defined.");
   }
